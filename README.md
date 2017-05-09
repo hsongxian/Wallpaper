@@ -246,7 +246,21 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 这样一个简单装逼神器出来了...
-这个项目太简单了,不需要你们的关注和赞赏...
 
 ![偶尔装下逼](http://upload-images.jianshu.io/upload_images/2215276-b079576542df7d40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 > github: https://github.com/songixan/Wallpaper
+
+
+
+
+### 其他资料
+* 壁纸
+> http://blog.csdn.net/t12x3456/article/details/7857741
+https://www.diycode.cc/topics/334
+http://www.qingpingshan.com/rjbc/az/232984.html
+http://mzh3344258.blog.51cto.com/1823534/806560/
+https://my.oschina.net/u/1770617/blog/339881
+
+* 相机
+> https://github.com/google/cameraview
+https://github.com/afollestad/material-camera
