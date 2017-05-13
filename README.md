@@ -20,7 +20,7 @@
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="con.song.wallpaper">
+          package="com.song.wallpaper">
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.SET_WALLPAPER"/>
     <application
@@ -65,7 +65,7 @@
 *   实现动态壁纸的LiveWallpaper.java:
 
 ```
-package con.song.wallpaper;
+package com.song.wallpaper;
 
 import android.hardware.Camera;
 import android.service.wallpaper.WallpaperService;
@@ -159,7 +159,7 @@ public class CameraLiveWallpaper extends WallpaperService {
 * 启动动态壁纸的MainActivity.java:
 
 ```
-package con.song.wallpaper;
+package com.song.wallpaper;
 
 import android.Manifest;
 import android.content.Context;

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "con.song.wallpaper"
+        applicationId "com.song.wallpaper"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1

@@ -1,4 +1,4 @@
-package con.song.wallpaper;
+package com.song.wallpaper;
 
 import org.junit.Test;
 

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    tools:context="con.song.wallpaper.MainActivity">
+    tools:context="com.song.wallpaper.MainActivity">
 
 
     <Button
