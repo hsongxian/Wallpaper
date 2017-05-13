@@ -2,6 +2,7 @@ package con.song.wallpaper;
 
 import android.hardware.Camera;
 import android.service.wallpaper.WallpaperService;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.io.IOException;
 public class CameraLiveWallpaper extends WallpaperService {
     // 实现WallpaperService必须实现的抽象方法  
     public Engine onCreateEngine() {
-        // 返回自定义的Engine  
+        // 返回自定义的CameraEngine
         return new CameraEngine();
     }
 
@@ -27,9 +28,14 @@ public class CameraLiveWallpaper extends WallpaperService {
         }
 
         @Override
+        public void onTouchEvent(MotionEvent event) {
+            super.onTouchEvent(event);
+            // 时间处理:点击拍照,长按拍照
+        }
+
+        @Override
         public void onDestroy() {
             super.onDestroy();
-            // 删除回调
             stopPreview();
         }
 

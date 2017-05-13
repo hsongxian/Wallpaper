@@ -31,17 +31,18 @@ public class MainActivity extends AppCompatActivity {
                         checkSelfPermission();
                     }
                 });
-
-
     }
 
+    /**
+     * 检查权限
+     */
     void checkSelfPermission() {
         if (ContextCompat.checkSelfPermission(mContext, PERMISSION_CAMERA) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
                     new String[]{PERMISSION_CAMERA},
                     PERMISSIONS_REQUEST_CAMERA);
         } else {
-            setTransparentWallpaper();
+//            setTransparentWallpaper();
             startWallpaper();
         }
     }
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    setTransparentWallpaper();
+//                    setTransparentWallpaper();
                     startWallpaper();
 
                 } else {
@@ -64,13 +65,18 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-    private void startWallpaper() {
+    /**
+     * 选择壁纸
+     */
+    void startWallpaper() {
         final Intent pickWallpaper = new Intent(Intent.ACTION_SET_WALLPAPER);
-        Intent chooser = Intent.createChooser(pickWallpaper, "选择壁纸");
+        Intent chooser = Intent.createChooser(pickWallpaper, getString(R.string.choose_wallpaper));
         startActivity(chooser);
     }
 
+    /**
+     * 不需要手动启动服务
+     */
     void setTransparentWallpaper() {
         startService(new Intent(mContext, CameraLiveWallpaper.class));
     }
